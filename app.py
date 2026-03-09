@@ -9,7 +9,9 @@ from utils.matcher import match_resume
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
+
 UPLOAD_FOLDER = "uploads"
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route("/")
 def home():
