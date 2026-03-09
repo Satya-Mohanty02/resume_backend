@@ -7,7 +7,11 @@ from utils.skills_extractor import extract_skills, extract_domain_skills
 from utils.matcher import match_resume
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(
+    app,
+    resources={r"/*": {"origins": "*"}},
+    supports_credentials=True
+)
 
 
 UPLOAD_FOLDER = "uploads"
