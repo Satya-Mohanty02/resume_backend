@@ -46,7 +46,7 @@ def upload_resume():
             "score": score,
             "skills_found": resume_skills,
             "missing_skills": missing_skills,
-            "pdf_url": f"https://resumebackend-production-0a06.up.railway.app/uploads/{file.filename}"
+            "pdf_url": f"https://resumebackend-production-7bfd.up.railway.app/uploads/{file.filename}"
         })
     results = sorted(results, key=lambda x: x["score"], reverse=True)
     return jsonify(results)
