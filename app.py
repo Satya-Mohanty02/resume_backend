@@ -1,7 +1,7 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
-from flask import send_from_directory
 import os
+
 from utils.pdf_parser import extract_text_from_pdf
 from utils.skills_extractor import extract_skills, extract_domain_skills
 from utils.matcher import match_resume
