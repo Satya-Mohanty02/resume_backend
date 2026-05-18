@@ -46,11 +46,7 @@ def upload_resume():
             "score": score,
             "skills_found": resume_skills,
             "missing_skills": missing_skills,
-            "pdf_url": f"https://resumebackend-production-7bfd.up.railway.app/uploads/{file.filename}"
+            "pdf_url": f"https://resume-backend-iota-green.vercel.app/uploads/{file.filename}"
         })
     results = sorted(results, key=lambda x: x["score"], reverse=True)
     return jsonify(results)
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
