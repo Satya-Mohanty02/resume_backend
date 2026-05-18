@@ -50,3 +50,6 @@ def upload_resume():
         })
     results = sorted(results, key=lambda x: x["score"], reverse=True)
     return jsonify(results)
+
+if __name__ == "__main__":
+    app.run()
