@@ -1,6 +1,4 @@
 flask
 flask-cors
 pdfplumber
-scikit-learn
-spacy
 gunicorn
