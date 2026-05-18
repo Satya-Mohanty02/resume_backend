@@ -1,10 +1,12 @@
 import pdfplumber
 
-def extract_text_from_pdf(file_path):
+def extract_text_from_pdf(path):
     text = ""
 
-    with pdfplumber.open(file_path) as pdf:
+    with pdfplumber.open(path) as pdf:
         for page in pdf.pages:
-            text += page.extract_text()
+            extracted = page.extract_text()
+            if extracted:
+                text += extracted
 
     return text
